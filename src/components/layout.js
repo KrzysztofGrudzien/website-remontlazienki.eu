@@ -2,7 +2,7 @@ import React from "react"
 import Footer from "./footer"
 import Header from "./header"
 import "@fontsource/poppins"
-import "../styles/basic.css"
+import "../styles/basic.scss"
 
 const Layout = ({ children }) => {
   return (
