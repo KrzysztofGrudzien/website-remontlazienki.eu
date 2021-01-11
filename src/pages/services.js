@@ -1,8 +1,9 @@
 import React from "react"
+import Layout from "../components/layout"
 
 const ServicesPage = () => {
   return (
-    <div>
+    <Layout>
       <h1>“Zrealizowaliśmy setki projektów wg pomysłu klienta lub projektu”</h1>
       <p>
         W tak małych pomieszczeniach skupia się tak wiele detali, które tworzą
@@ -12,7 +13,7 @@ const ServicesPage = () => {
         życzenie klienta. Służymy pomocą w doborze, transporcie oraz wniesieniu
         materiałów.
       </p>
-    </div>
+    </Layout>
   )
 }
 
