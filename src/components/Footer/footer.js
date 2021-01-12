@@ -1,9 +1,10 @@
 import React from "react"
+import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   return (
-    <footer className="header">
-      <p className="footer__copyright">
+    <footer className={footerStyles.footer}>
+      <p className={footerStyles.footerCopyrights}>
         Copytights 2020. Wszelkie prawa zastrzeżone przez Artur Grudzień
       </p>
     </footer>
