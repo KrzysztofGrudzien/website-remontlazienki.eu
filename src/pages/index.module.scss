@@ -1,0 +1,11 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 6;
+
+  &-title {
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
