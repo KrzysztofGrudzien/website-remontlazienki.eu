@@ -5,10 +5,34 @@
   flex-direction: column;
   grid-column-start: 2;
   grid-column-end: 6;
+  position: relative;
 
   &-title {
     column-count: 2;
     column-gap: 20px;
+  }
+
+  &-icon-small-cross-left-top {
+    position: absolute;
+    left: -2.8rem;
+    top: -2.8rem;
+  }
+
+  &-icon-small-cross-left-bottom {
+    position: absolute;
+    left: -2.8rem;
+    bottom: -2.8rem;
+  }
+
+  &-icon-small-cross-right-top {
+    position: absolute;
+    right: -2.8rem;
+    top: -2.8rem;
+  }
+  &-icon-small-cross-right-bottom {
+    position: absolute;
+    right: -2.8rem;
+    bottom: -2.8rem;
   }
 }
 
@@ -34,7 +58,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: left 0.3s ease-in;
     width: 4rem;
+
+    &:hover {
+      left: -6rem;
+    }
   }
 
   &-nav-next {
@@ -43,10 +72,16 @@
     display: flex;
     justify-content: center;
     height: 4rem;
-    right: -3.2rem;
+    right: -4.3rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: right 0.3s ease-in;
+    width: 4rem;
+
+    &:hover {
+      right: -5.3rem;
+    }
   }
 
   &-image {

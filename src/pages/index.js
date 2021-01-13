@@ -4,6 +4,7 @@ import indexStyles from "./index.module.scss"
 import LinkButton from "../components/LinkButton/linkButton"
 import IconArrowLeft from "../assets/icons/icon-arrow-left-dark.svg"
 import IconArrowRight from "../assets/icons/icon-arrow-right-dark.svg"
+import IconSmallCross from "../assets/icons/icon-cross-small.svg"
 import { graphql, useStaticQuery } from "gatsby"
 
 const HomePage = () => {
@@ -23,6 +24,14 @@ const HomePage = () => {
   return (
     <Layout>
       <article className={indexStyles.article}>
+        <IconSmallCross className={indexStyles.articleIconSmallCrossLeftTop} />
+        <IconSmallCross
+          className={indexStyles.articleIconSmallCrossLeftBottom}
+        />
+        <IconSmallCross className={indexStyles.articleIconSmallCrossRightTop} />
+        <IconSmallCross
+          className={indexStyles.articleIconSmallCrossRightBottom}
+        />
         <h2>
           “Z dumą projektujemy i wykańczamy nowoczesne & stylowe łazienki”
         </h2>
@@ -36,6 +45,14 @@ const HomePage = () => {
         <LinkButton />
       </article>
       <div className={indexStyles.slider}>
+        <IconSmallCross className={indexStyles.articleIconSmallCrossLeftTop} />
+        <IconSmallCross
+          className={indexStyles.articleIconSmallCrossLeftBottom}
+        />
+        <IconSmallCross className={indexStyles.articleIconSmallCrossRightTop} />
+        <IconSmallCross
+          className={indexStyles.articleIconSmallCrossRightBottom}
+        />
         <a className={indexStyles.sliderNavPrev}>
           <IconArrowLeft />
         </a>
