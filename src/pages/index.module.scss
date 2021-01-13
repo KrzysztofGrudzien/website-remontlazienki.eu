@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .article {
   display: flex;
   flex-direction: column;
@@ -17,26 +19,41 @@
   position: relative;
 
   &-gallery {
+    box-shadow: -2.2rem 2.2rem 0 $color-additional--light;
+    height: 56.6rem;
     width: 100%;
   }
 
   &-nav-prev {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    left: -5rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    width: 4rem;
   }
 
   &-nav-next {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    right: -3.2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
   }
 
   &-image {
-    width: 100%;
-    height: 56rem;
+    height: 56.6rem;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
+    width: 100%;
   }
 }
