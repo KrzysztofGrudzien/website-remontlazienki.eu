@@ -1,7 +1,18 @@
 import React from "react"
 import sidebarStyles from "./sidebar.module.scss"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Sidebar = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
+
   return (
     <div className={sidebarStyles.sidebar}>
       <p className={sidebarStyles.sidebarAuthor}>
@@ -11,7 +22,7 @@ const Sidebar = () => {
           href="http://criscode.eu"
           target="_blank"
         >
-          Krzysztof Grudzień
+          {data.site.siteMetadata.author}
         </a>
       </p>
     </div>
