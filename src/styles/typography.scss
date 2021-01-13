@@ -1,7 +1,23 @@
+@import "./variables.scss";
+
 h2 {
   font-size: 3.85rem;
   font-weight: 500;
   line-height: 5rem;
   letter-spacing: 0.4px;
   margin-bottom: 3.6rem;
+}
+
+span.page-id {
+  bottom: 2.7rem;
+  color: $color-additional--light;
+  font-size: 8rem;
+  font-weight: 700;
+  left: 25rem;
+  position: absolute;
+  text-orientation: mixed;
+  transform-origin: center;
+  transform: rotate(-180deg);
+  writing-mode: vertical-lr;
+  z-index: -10;
 }

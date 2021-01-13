@@ -66,6 +66,7 @@ const HomePage = () => {
           <IconArrowRight />
         </a>
       </div>
+      <span className="page-id">01. home</span>
     </Layout>
   )
 }
