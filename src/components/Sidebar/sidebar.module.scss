@@ -26,7 +26,8 @@
   &-phone-alert {
     animation: phonePulse 1.2s 0.2s ease-in-out infinite;
     border-radius: 50%;
-    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    background-color: $color-additional;
     height: 5px;
     position: absolute;
     top: 0.7rem;
@@ -54,7 +55,6 @@
 
 svg.sidebar-icon {
   cursor: pointer;
-  width: 4rem;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
   &:hover {
