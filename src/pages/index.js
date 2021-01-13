@@ -2,11 +2,24 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import indexStyles from "./index.module.scss"
 import LinkButton from "../components/LinkButton/linkButton"
-// import Img from "../assets/images/lazienka6.jpg"
 import IconArrowLeft from "../assets/icons/icon-arrow-left-dark.svg"
 import IconArrowRight from "../assets/icons/icon-arrow-right-dark.svg"
+import { graphql, useStaticQuery } from "gatsby"
 
 const HomePage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "lazienka6.jpg" }) {
+        id
+        childImageSharp {
+          fluid(fit: COVER, jpegQuality: 80, background: "black") {
+            src
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <article className={indexStyles.article}>
@@ -27,7 +40,10 @@ const HomePage = () => {
           <IconArrowLeft />
         </a>
         <div className={indexStyles.sliderGallery}>
-          {/* <img src={Img} className={indexStyles.sliderImage}></img> */}
+          <img
+            src={data.file.childImageSharp.fluid.src}
+            className={indexStyles.sliderImage}
+          />
         </div>
         <a className={indexStyles.sliderNavNext}>
           <IconArrowRight />
