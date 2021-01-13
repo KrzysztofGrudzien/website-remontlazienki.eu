@@ -9,3 +9,34 @@
     column-gap: 20px;
   }
 }
+
+.slider {
+  display: flex;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  position: relative;
+
+  &-gallery {
+    width: 100%;
+  }
+
+  &-nav-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  &-nav-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+
+  &-image {
+    width: 100%;
+    height: 56rem;
+    object-fit: cover;
+  }
+}
