@@ -5,6 +5,7 @@ import LinkButton from "../components/LinkButton/linkButton"
 import IconArrowLeft from "../assets/icons/icon-arrow-left-dark.svg"
 import IconArrowRight from "../assets/icons/icon-arrow-right-dark.svg"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
+import LinkButtons from "../components/LinkButtons/LinkButtons"
 import { graphql, useStaticQuery } from "gatsby"
 
 const HomePage = () => {
@@ -67,6 +68,9 @@ const HomePage = () => {
         </a>
       </div>
       <span className="page-id">01. home</span>
+      <div className={indexStyles.buttonsContainer}>
+        <LinkButtons />
+      </div>
     </Layout>
   )
 }
