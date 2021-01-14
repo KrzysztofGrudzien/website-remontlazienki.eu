@@ -9,6 +9,7 @@ import IconCornerLeftBottom from "../../assets/icons/icon-corner-left-bottom.svg
 import IconCornerLeftTop from "../../assets/icons/icon-corner-left-top.svg"
 import IconCornerRightBottom from "../../assets/icons/icon-corner-right-bottom.svg"
 import IconCornerRightTop from "../../assets/icons/icon-corner-right-top.svg"
+import IconBurgerMenu from "../../assets/icons/icon-burger-menu.svg"
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
       <h1 className={headerStyles.headerLogo}>
         remont<span>lazienki</span>.eu
       </h1>
+      {/*
       <nav className={headerStyles.navbar}>
         <IconCloseMenu className={headerStyles.navbarClose} />
         <ul className={headerStyles.navbarList}>
@@ -92,7 +94,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-
+        
         <div className={headerStyles.navbarDetail}>
           <IconPhone />
           519-811-460
@@ -110,6 +112,8 @@ const Header = () => {
           </a>
         </div>
       </nav>
+      */}
+      <IconBurgerMenu />
     </header>
   )
 }
