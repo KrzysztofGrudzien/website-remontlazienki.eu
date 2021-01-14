@@ -1,5 +1,7 @@
 @import "../styles/variables.scss";
 
+/* ----- PAGE HOME ----- */
+
 .article {
   display: flex;
   flex-direction: column;
@@ -90,5 +92,58 @@
     padding: 0;
     object-fit: cover;
     width: 100%;
+  }
+}
+
+/* ----- PAGE SEREVICES ----- */
+
+.services {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 7;
+  grid-column-end: 13;
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  &-card {
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 10rem;
+    padding-top: 2rem;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-primary--active;
+    }
+  }
+
+  &-card-title {
+    font-weight: 500;
+    padding: 1rem;
+  }
+
+  &-list {
+    align-self: flex-start;
+  }
+
+  &-list-item {
+    font-weight: 300;
+    margin-bottom: 0;
+    list-style: none;
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 }

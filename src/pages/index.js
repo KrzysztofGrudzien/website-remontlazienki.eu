@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
-import indexStyles from "./index.module.scss"
+import indexStyles from "./pages.module.scss"
 import LinkButton from "../components/LinkButton/linkButton"
 import IconArrowLeft from "../assets/icons/icon-arrow-left-dark.svg"
 import IconArrowRight from "../assets/icons/icon-arrow-right-dark.svg"
@@ -68,9 +68,7 @@ const HomePage = () => {
         </a>
       </div>
       <span className="page-id">01. home</span>
-      <div className={indexStyles.buttonsContainer}>
-        <LinkButtons />
-      </div>
+      <LinkButtons />
     </Layout>
   )
 }
