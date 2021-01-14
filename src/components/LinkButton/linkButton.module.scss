@@ -12,6 +12,7 @@
   position: relative;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.3s ease-in;
   width: 16.1rem;
 
   &::before {
@@ -23,9 +24,12 @@
     position: absolute;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    z-index: -1;
   }
 
   &:hover {
+    background-color: $color-primary--active;
+
     &::before {
       bottom: 0.5rem;
       left: 0.5rem;
