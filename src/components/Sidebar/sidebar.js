@@ -18,10 +18,36 @@ const Sidebar = () => {
 
   return (
     <div className={sidebarStyles.sidebar}>
+      <span className={sidebarStyles.sidebarPhoneTooltip}>
+        Witaj, <br />
+        Widzimy, że nadal jesteś nie zdecydowany. Nie wachaj się i zadzwoń .
+        Odpowiemy Ci na wszelkie pytania z zakresu remontów i wykańczania
+        łazienek indywidualnie jak i pod projekt.
+        <br />
+        <br />
+        ARTUR GRUDZIEŃ
+        <br />
+        tel. 519-811-460 dekorilla@wp.pl
+      </span>
+      <span className={sidebarStyles.sidebarEmailTooltip}>
+        Witaj, <br />
+        Jeśli nie chcesz z nami rozmawiać, zawsze możesz napisać szybkiego
+        maila. Odpowiemy na niego jak najszybciej się da. <br />
+        <br />
+        dekorilla@wp.pl
+      </span>
+      <span className={sidebarStyles.sidebarFacebookTooltip}>
+        Witaj, <br />
+        Jeśli chcesz być na bierząco zaglądaj na nasz profil na facebooku.
+        <br />
+        <br />
+        Znajdziesz nas tutaj: <a href="#">facebook.com/dekorilla</a>
+      </span>
       <div className={sidebarStyles.sidebarIcons}>
         <div className={sidebarStyles.sidebarPhoneAlert} />
         <IconPhone className={sidebarStyles.sidebarIcon} />
         <IconEnvelop className={sidebarStyles.sidebarIcon} />
+
         <IconFacebook className={sidebarStyles.sidebarIcon} />
       </div>
       <p className={sidebarStyles.sidebarAuthor}>

@@ -13,6 +13,7 @@
   position: fixed;
   top: 0;
   width: 7rem;
+  z-index: 1000;
 
   &-author {
     font-size: 1.2rem;
@@ -44,6 +45,54 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &-phone-tooltip {
+    background-color: $color-primary;
+    border-radius: 0.5rem;
+    color: $color-secondary;
+    position: absolute;
+    padding: 1rem;
+    left: 5rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    top: 22rem;
+    width: 30rem;
+  }
+
+  &-email-tooltip {
+    background-color: $color-primary;
+    border-radius: 0.5rem;
+    color: $color-secondary;
+    position: absolute;
+    padding: 1rem;
+    left: 5rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    top: 32rem;
+    width: 30rem;
+  }
+
+  &-facebook-tooltip {
+    background-color: $color-primary;
+    border-radius: 0.5rem;
+    color: $color-secondary;
+    position: absolute;
+    padding: 1rem;
+    left: 5rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    top: 37rem;
+    width: 30rem;
+
+    a {
+      color: $color-secondary;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $color-additional;
+      }
+    }
   }
 
   &-link {
