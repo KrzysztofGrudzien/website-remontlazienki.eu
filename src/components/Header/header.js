@@ -1,6 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import headerStyles from "./header.module.scss"
+import IconPhone from "../../assets/icons/icon-phone.svg"
+import IconEnvelop from "../../assets/icons/icon-envelop.svg"
+import IconFacebook from "../../assets/icons/icon-fb.svg"
+import IconCloseMenu from "../../assets/icons/icon-close-menu.svg"
+import IconCornerLeftBottom from "../../assets/icons/icon-corner-left-bottom.svg"
+import IconCornerLeftTop from "../../assets/icons/icon-corner-left-top.svg"
+import IconCornerRightBottom from "../../assets/icons/icon-corner-right-bottom.svg"
+import IconCornerRightTop from "../../assets/icons/icon-corner-right-top.svg"
 
 const Header = () => {
   return (
@@ -9,28 +17,98 @@ const Header = () => {
         remont<span>lazienki</span>.eu
       </h1>
       <nav className={headerStyles.navbar}>
-        <ul className="navbar__list">
-          <li className="navbar__item">
-            <Link to="/" className="navbar__link">
+        <IconCloseMenu className={headerStyles.navbarClose} />
+        <ul className={headerStyles.navbarList}>
+          <li className={headerStyles.navbarItem}>
+            <IconCornerLeftBottom
+              className={headerStyles.navbarItemIconCornerLeftBottom}
+            />
+            <IconCornerLeftTop
+              className={headerStyles.navbarItemIconCornerLeftTop}
+            />
+            <IconCornerRightBottom
+              className={headerStyles.navbarItemIconCornerRightBottom}
+            />
+            <IconCornerRightTop
+              className={headerStyles.navbarItemIconCornerRightTop}
+            />
+            <Link to="/" className={headerStyles.navbarItemLink}>
               o nas
             </Link>
           </li>
-          <li className="navbar__item">
-            <Link to="/services" href="" className="navbar__link">
+          <li className={headerStyles.navbarItem}>
+            <IconCornerLeftBottom
+              className={headerStyles.navbarItemIconCornerLeftBottom}
+            />
+            <IconCornerLeftTop
+              className={headerStyles.navbarItemIconCornerLeftTop}
+            />
+            <IconCornerRightBottom
+              className={headerStyles.navbarItemIconCornerRightBottom}
+            />
+            <IconCornerRightTop
+              className={headerStyles.navbarItemIconCornerRightTop}
+            />
+            <Link
+              to="/services"
+              href=""
+              className={headerStyles.navbarItemLink}
+            >
               usługi
             </Link>
           </li>
-          <li className="navbar__item">
-            <Link to="/gallery" className="navbar__link">
+          <li className={headerStyles.navbarItem}>
+            <IconCornerLeftBottom
+              className={headerStyles.navbarItemIconCornerLeftBottom}
+            />
+            <IconCornerLeftTop
+              className={headerStyles.navbarItemIconCornerLeftTop}
+            />
+            <IconCornerRightBottom
+              className={headerStyles.navbarItemIconCornerRightBottom}
+            />
+            <IconCornerRightTop
+              className={headerStyles.navbarItemIconCornerRightTop}
+            />
+            <Link to="/gallery" className={headerStyles.navbarItemLink}>
               galeria
             </Link>
           </li>
-          <li className="navbar__item">
-            <Link to="/contact" className="navbar__link">
+          <li className={headerStyles.navbarItem}>
+            <IconCornerLeftBottom
+              className={headerStyles.navbarItemIconCornerLeftBottom}
+            />
+            <IconCornerLeftTop
+              className={headerStyles.navbarItemIconCornerLeftTop}
+            />
+            <IconCornerRightBottom
+              className={headerStyles.navbarItemIconCornerRightBottom}
+            />
+            <IconCornerRightTop
+              className={headerStyles.navbarItemIconCornerRightTop}
+            />
+            <Link to="/contact" className={headerStyles.navbarItemLink}>
               kontakt
             </Link>
           </li>
         </ul>
+
+        <div className={headerStyles.navbarDetail}>
+          <IconPhone />
+          519-811-460
+        </div>
+        <div className={headerStyles.navbarDetail}>
+          <IconEnvelop />
+          <a href="#" className={headerStyles.navbarDetailLink}>
+            dekorilla@wp.pl
+          </a>
+        </div>
+        <div className={headerStyles.navbarDetail}>
+          <IconFacebook />
+          <a href="#" className={headerStyles.navbarDetailLink}>
+            facebook.com/dekorilla
+          </a>
+        </div>
       </nav>
     </header>
   )

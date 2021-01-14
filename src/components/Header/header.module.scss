@@ -21,7 +21,122 @@
 }
 
 .navbar {
-  position: absolute;
+  align-items: center;
+  background-color: $color-secondary;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
   right: 0;
   top: 0;
+  width: 45rem;
+  z-index: 100;
+
+  &-close {
+    position: absolute;
+    top: 2.3rem;
+    right: 2.3rem;
+  }
+
+  &-list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 7rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  &-item {
+    align-items: center;
+    display: flex;
+    font-size: 2.4rem;
+    height: 6.5rem;
+    margin-bottom: 2.2rem;
+    padding: 0.4rem;
+    position: relative;
+    width: 100%;
+  }
+
+  &-item-icon-corner-left-bottom {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &-item-icon-corner-left-top {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &-item-icon-corner-right-bottom {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  &-item-icon-corner-right-top {
+    right: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &-item-link {
+    background-position: 0%;
+    color: $color-primary;
+    height: 100%;
+    line-height: 5.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    width: 100%;
+
+    &::before {
+      background: $color-primary;
+      content: "";
+      color: $color-secondary;
+      height: 5.5rem;
+      position: absolute;
+      right: 0.4rem;
+      top: 0.5rem;
+      transform: scaleY(0);
+      transition: transform 0.2s ease-in-out,
+        width 0.4s 0.2s cubic-bezier(1, 0, 0, 1);
+      width: 0;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      transform: scaleY(1);
+      width: calc(100% - 0.8rem);
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &-detail {
+    color: $color-primary;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02rem;
+    width: 100%;
+
+    svg {
+      margin-right: 2.5rem;
+      margin-left: 1.4rem;
+      width: 3rem;
+    }
+  }
+
+  &-detail-link {
+    color: $color-primary;
+    text-decoration: none;
+  }
 }
