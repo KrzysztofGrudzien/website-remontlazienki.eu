@@ -18,8 +18,9 @@ const Sidebar = () => {
 
   return (
     <div className={sidebarStyles.sidebar}>
+      {/*
       <span className={sidebarStyles.sidebarPhoneTooltip}>
-        Witaj, <br />
+         Witaj, <br /> 
         Widzimy, że nadal jesteś nie zdecydowany. Nie wachaj się i zadzwoń .
         Odpowiemy Ci na wszelkie pytania z zakresu remontów i wykańczania
         łazienek indywidualnie jak i pod projekt.
@@ -43,6 +44,7 @@ const Sidebar = () => {
         <br />
         Znajdziesz nas tutaj: <a href="#">facebook.com/dekorilla</a>
       </span>
+      */}
       <div className={sidebarStyles.sidebarIcons}>
         <div className={sidebarStyles.sidebarPhoneAlert} />
         <IconPhone className={sidebarStyles.sidebarIcon} />
