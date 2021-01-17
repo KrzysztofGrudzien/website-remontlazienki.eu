@@ -3,7 +3,6 @@ import Layout from "../components/Layout/layout"
 import servicesStyles from "./pages.module.scss"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
 import LinkButton from "../components/LinkButton/LinkButton"
-import LinkButtons from "../components/LinkButtons/LinkButtons"
 import IconCheck from "../assets/icons/icon-check.svg"
 import IconTerracotta from "../assets/icons/icon-squares.svg"
 import IconBath from "../assets/icons/icon-bath.svg"
@@ -11,6 +10,7 @@ import IconPaintTool from "../assets/icons/icon-paint-tool.svg"
 import IconColorLabels from "../assets/icons/icon-color-labels.svg"
 import IconBulb from "../assets/icons/icon-bulb.svg"
 import IconTools from "../assets/icons/icon-tools.svg"
+import LinkButtons from "../components/LinkButtons/LinkButtons"
 
 const ServicesPage = () => {
   return (

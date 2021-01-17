@@ -3,10 +3,12 @@
 /* ----- PAGE HOME ----- */
 
 .article {
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   grid-column-start: 2;
   grid-column-end: 6;
+  margin-top: 16.5rem;
   position: relative;
 
   &-title {
@@ -144,6 +146,132 @@
 
     svg {
       margin-right: 0.5rem;
+    }
+  }
+}
+
+/* ----- PAGE CONTACT ----- */
+
+.contact-hero {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-top: 2.8rem;
+  position: relative;
+
+  &-title {
+    margin-bottom: 0;
+    min-height: 20.4rem;
+  }
+
+  &-icon-small-cross-left-top {
+    position: absolute;
+    left: -2.6rem;
+    top: -0.8rem;
+  }
+
+  &-icon-small-cross-left-bottom {
+    position: absolute;
+    left: -2.6rem;
+    bottom: -0.8rem;
+  }
+}
+
+.contact-random-image {
+  align-self: flex-start;
+  background-color: $color-primary;
+  grid-column-start: 6;
+  grid-column-end: 13;
+  min-height: 20.4rem;
+  margin-top: 2.8rem;
+  margin-bottom: 0;
+  position: relative;
+
+  &-icon-small-cross-right-top {
+    position: absolute;
+    right: -0.8rem;
+    top: -0.8rem;
+  }
+  &-icon-small-cross-right-bottom {
+    position: absolute;
+    right: -0.8rem;
+    bottom: -0.8rem;
+  }
+}
+
+.contact-form-container {
+  grid-column-start: 2;
+  grid-column-end: 13;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 100%;
+
+  &-input-phone,
+  &-input-email,
+  &-input-name,
+  &-input-subject,
+  &-input-company,
+  &-input-service-type {
+    border: none;
+    border-bottom: 1px solid lighten($color-primary, 60%);
+    background: none;
+    font-size: 1.4rem;
+    height: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &-text-area {
+    border: none;
+    border-bottom: 1px solid lighten($color-primary, 60%);
+    background: none;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+  }
+
+  &-input-wrapper-text-area {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  &-info-wrapper {
+    display: flex;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    padding-left: 2rem;
+    width: 60%;
+  }
+
+  &-info-data-company-important {
+    display: block;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+  }
+
+  &-info-data,
+  &-info-quote {
+    width: 50%;
+  }
+
+  &-info-quote {
+    padding-left: 5rem;
+    font-size: 1.4rem;
+
+    strong {
+      font-size: 2rem;
     }
   }
 }
