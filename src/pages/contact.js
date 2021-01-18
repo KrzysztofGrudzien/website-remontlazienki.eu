@@ -2,8 +2,9 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import contactStyles from "./pages.module.scss"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
-import LinkButtons from "../components/LinkButtons/LinkButtons"
-import LinkButton from "../components/LinkButton/LinkButton"
+import IconArrowLeftLight from "../assets/icons/icon-arrow-left-light.svg"
+import IconArrowRightLight from "../assets/icons/icon-arrow-right-light.svg"
+import { Link } from "gatsby"
 
 const ContactPage = () => {
   return (
@@ -85,7 +86,9 @@ const ContactPage = () => {
               placeholder="Treść wiadomości"
               className={contactStyles.formTextArea}
             />
-            <LinkButton />
+            <button to="/" className={contactStyles.pageLink}>
+              wyślij wiadomość
+            </button>
           </div>
           <div className={contactStyles.formInfoWrapper}>
             <div className={contactStyles.formInfoData}>
@@ -120,7 +123,17 @@ const ContactPage = () => {
         </form>
       </div>
       <span className="page-id">04. kontakt</span>
-      <LinkButtons />
+      <div className={contactStyles.buttonsWrapper}>
+        <Link to="/gallery" className={contactStyles.buttonsWrapperLink}>
+          <IconArrowLeftLight />
+        </Link>
+        <Link
+          to="/"
+          className={`${contactStyles.buttonsWrapperLink} ${contactStyles.buttonsWrapperLinkActive}`}
+        >
+          <IconArrowRightLight />
+        </Link>
+      </div>
     </Layout>
   )
 }

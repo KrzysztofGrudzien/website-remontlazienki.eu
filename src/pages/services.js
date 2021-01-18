@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import servicesStyles from "./pages.module.scss"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
-import LinkButton from "../components/LinkButton/LinkButton"
 import IconCheck from "../assets/icons/icon-check.svg"
 import IconTerracotta from "../assets/icons/icon-squares.svg"
 import IconBath from "../assets/icons/icon-bath.svg"
@@ -10,7 +9,9 @@ import IconPaintTool from "../assets/icons/icon-paint-tool.svg"
 import IconColorLabels from "../assets/icons/icon-color-labels.svg"
 import IconBulb from "../assets/icons/icon-bulb.svg"
 import IconTools from "../assets/icons/icon-tools.svg"
-import LinkButtons from "../components/LinkButtons/LinkButtons"
+import IconArrowLeftLight from "../assets/icons/icon-arrow-left-light.svg"
+import IconArrowRightLight from "../assets/icons/icon-arrow-right-light.svg"
+import { Link } from "gatsby"
 
 const ServicesPage = () => {
   return (
@@ -39,7 +40,9 @@ const ServicesPage = () => {
           życzenie klienta. Służymy pomocą w doborze, transporcie oraz
           wniesieniu materiałów.
         </p>
-        <LinkButton />
+        <Link to="/gallery" className={servicesStyles.pageLink}>
+          nasza galeria
+        </Link>
       </article>
       <section className={servicesStyles.services}>
         <h2>Co jeszcze możemy zrobić?</h2>
@@ -149,7 +152,17 @@ const ServicesPage = () => {
         </div>
       </section>
       <span className="page-id">02. usługi</span>
-      <LinkButtons />
+      <div className={servicesStyles.buttonsWrapper}>
+        <Link to="/" className={servicesStyles.buttonsWrapperLink}>
+          <IconArrowLeftLight />
+        </Link>
+        <Link
+          to="/gallery"
+          className={`${servicesStyles.buttonsWrapperLink} ${servicesStyles.buttonsWrapperLinkActive}`}
+        >
+          <IconArrowRightLight />
+        </Link>
+      </div>
     </Layout>
   )
 }

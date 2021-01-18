@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
 import indexStyles from "./pages.module.scss"
-import LinkButton from "../components/LinkButton/linkButton"
 import IconArrowLeft from "../assets/icons/icon-arrow-left-dark.svg"
 import IconArrowRight from "../assets/icons/icon-arrow-right-dark.svg"
+import IconArrowLeftLight from "../assets/icons/icon-arrow-left-light.svg"
+import IconArrowRightLight from "../assets/icons/icon-arrow-right-light.svg"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
-import LinkButtons from "../components/LinkButtons/LinkButtons"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const HomePage = () => {
   const data = useStaticQuery(graphql`
@@ -43,7 +43,9 @@ const HomePage = () => {
           niesamowite i efektowne wnętrze sam czy korzystając z usług
           projektantów
         </p>
-        <LinkButton />
+        <Link to="/services" className={indexStyles.pageLink}>
+          nasze usługi
+        </Link>
       </article>
       <div className={indexStyles.slider}>
         <IconSmallCross className={indexStyles.articleIconSmallCrossLeftTop} />
@@ -68,7 +70,17 @@ const HomePage = () => {
         </a>
       </div>
       <span className="page-id">01. home</span>
-      <LinkButtons />
+      <div className={indexStyles.buttonsWrapper}>
+        <Link to="/contact" className={indexStyles.buttonsWrapperLink}>
+          <IconArrowLeftLight />
+        </Link>
+        <Link
+          to="/services"
+          className={`${indexStyles.buttonsWrapperLink} ${indexStyles.buttonsWrapperLinkActive}`}
+        >
+          <IconArrowRightLight />
+        </Link>
+      </div>
     </Layout>
   )
 }

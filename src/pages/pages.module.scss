@@ -338,7 +338,7 @@
   height: 15rem;
 }
 
-.slider-image {
+.slider-container {
   background-color: $color-primary;
   grid-column-start: 6;
   grid-column-end: 13;
@@ -348,4 +348,73 @@
 .gallery-title {
   grid-column-start: 2;
   grid-column-end: 13;
+}
+
+/* ----- LINK BUTTON ----- */
+
+.page-link {
+  align-self: flex-end;
+  background-color: $color-primary;
+  border: none;
+  color: $color-secondary;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.02rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in;
+  width: 16.1rem;
+
+  &::before {
+    bottom: -0.5rem;
+    border: solid 1px $color-primary;
+    content: "";
+    height: 100%;
+    left: -0.5rem;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    background-color: $color-primary--active;
+
+    &::before {
+      bottom: 0.5rem;
+      left: 0.5rem;
+    }
+  }
+}
+
+/* ----- LINK BUTTONS ----- */
+
+.buttons-wrapper {
+  background-color: $color-primary;
+  bottom: 0;
+  display: flex;
+  height: 6rem;
+  position: absolute;
+  right: 0;
+  width: 14rem;
+
+  &-link {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+  }
+
+  svg {
+    width: 0.8rem;
+  }
+
+  &-link-active {
+    background-color: $color-primary--active;
+  }
 }

@@ -2,8 +2,9 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import galleryStyles from "./pages.module.scss"
 import IconSmallCross from "../assets/icons/icon-cross-small.svg"
-import LinkButton from "../components/LinkButton/LinkButton"
-import LinkButtons from "../components/LinkButtons/LinkButtons"
+import { Link } from "gatsby"
+import IconArrowLeftLight from "../assets/icons/icon-arrow-left-light.svg"
+import IconArrowRightLight from "../assets/icons/icon-arrow-right-light.svg"
 
 const GalleryPage = () => {
   return (
@@ -33,16 +34,28 @@ const GalleryPage = () => {
             <br />
             <strong>Zapraszamy do współpracy!</strong>
           </p>
-          <LinkButton />
+          <Link to="/contact" className={galleryStyles.pageLink}>
+            kontakt z nami
+          </Link>
         </div>
       </article>
       <div className={galleryStyles.randomImage}></div>
-      <div className={galleryStyles.sliderImage}></div>
+      <div className={galleryStyles.sliderContainer}></div>
       <h2 className={galleryStyles.galleryTitle}>
         Ostatnio zrealizowane projekty
       </h2>
       <span className="page-id">03. nasze prace</span>
-      <LinkButtons />
+      <div className={galleryStyles.buttonsWrapper}>
+        <Link to="/services" className={galleryStyles.buttonsWrapperLink}>
+          <IconArrowLeftLight />
+        </Link>
+        <Link
+          to="/contact"
+          className={`${galleryStyles.buttonsWrapperLink} ${galleryStyles.buttonsWrapperLinkActive}`}
+        >
+          <IconArrowRightLight />
+        </Link>
+      </div>
     </Layout>
   )
 }

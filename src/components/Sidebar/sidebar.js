@@ -58,6 +58,7 @@ const Sidebar = () => {
           className={sidebarStyles.sidebarLink}
           href="http://criscode.eu"
           target="_blank"
+          rel="noreferrer"
         >
           {data.site.siteMetadata.author}
         </a>
