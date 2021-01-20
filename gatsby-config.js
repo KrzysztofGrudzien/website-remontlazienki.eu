@@ -12,6 +12,7 @@ module.exports = {
     author: "Krzysztof Grudzień",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
