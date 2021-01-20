@@ -12,6 +12,7 @@ module.exports = {
     author: "Krzysztof Grudzień",
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -28,6 +29,12 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
   ],
